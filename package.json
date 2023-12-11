@@ -1,0 +1,25 @@
+{
+  "name": "svk",
+  "displayName": "svenska",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "svenska",
+      "aliases": ["svenska", "svenska"],
+      "extensions": [".svk"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "svenska",
+      "scopeName": "source.svenska",
+      "path": "./syntaxes/svenska.tmLanguage.json"
+    }]
+  }
+}

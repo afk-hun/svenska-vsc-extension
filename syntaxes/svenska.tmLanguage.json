@@ -1,0 +1,72 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "svenska",
+  "patterns": [
+    {
+      "include": "#obestämd"
+    },
+
+    {
+      "include": "#plural"
+    },
+
+    {
+      "include": "#preposition"
+    },
+
+    {
+      "include": "#dash"
+    },
+
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "plural": {
+      "patterns": [
+        {
+          "name": "constant.language.c",
+          "match": "\\s-+(er|ar|or|et|en|n|men|met|a|an|on|s|r|er|te|tte|de|dde|t|tt)\\b"
+        }
+      ]
+    },
+
+    "preposition": {
+      "patterns": [
+        {
+          "name": "variable.other.normal.shell",
+          "match": "\\s+(med|att|om|i|på|till|av|från|för)\\b"
+        }
+      ]
+    },
+
+    "dash": {
+      "patterns": [
+        {
+          "name": "constant.language.c",
+          "match": "\\s[-]"
+        }
+      ]
+    },
+
+    "obestämd": {
+      "patterns": [
+        {
+          "name": "keyword.control",
+          "match": "^(en|ett)\\b"
+        }
+      ]
+    },
+
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.svenska",
+          "match": "(\\t+[^\\n]+)"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.svenska"
+}
